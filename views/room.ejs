@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <title>Zoom</title>
+    <link
+      rel="stylesheet"
+      href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css"
+      media="all"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="https://d24cgw3uvb9a9h.cloudfront.net/zoom.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      const roomId = "<%=roomId %>";
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <div class="videos">
+          <div id="video-grid"></div>
+        </div>
+        <div class="controls">
+          <div class="controls_block">
+            <div
+              class="controls_block_button mute_button"
+              onclick="muteUnmute()"
+            >
+              <i class="fas fa-microphone"></i>
+              <span>Mute</span>
+            </div>
+            <div
+              class="controls_block_button video_button"
+              onclick="playStop()"
+            >
+              <i class="fas fa-video"></i>
+              <span>Stop Video</span>
+            </div>
+          </div>
+          <div class="controls_block">
+            <div class="controls_block_button">
+              <i class="fas fa-shield-alt"></i><span>Security</span>
+            </div>
+            <div class="controls_block_button">
+              <i class="fas fa-user-friends"></i><span>Participants</span>
+            </div>
+            <div class="controls_block_button">
+              <i class="fas fa-comment-alt"></i><span>Chat</span>
+            </div>
+          </div>
+          <div class="controls_block">
+            <div class="controls_block_button" onclick="setHome()">
+              <span class="leave_meeting">Leave Meeting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="header">
+          <h6>Chat</h6>
+        </div>
+        <div class="chat_window">
+          <ul class="messages"></ul>
+        </div>
+        <div class="message_container">
+          <input
+            id="chat_message"
+            type="text"
+            placeholder="Type message here..."
+          />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

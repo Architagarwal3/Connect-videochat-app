@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+}
+.super {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  margin-top: 300px;
+  justify-content: space-between;
+}
+.btn {
+  height: 58px;
+  line-height: 44px;
+  border-radius: 12px;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-left: 15px;
+}
+.right {
+  margin-left: 30px;
+}

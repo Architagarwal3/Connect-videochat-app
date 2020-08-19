@@ -1,0 +1,41 @@
+body {
+  margin-top: 10%;
+}
+.input {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+.btn {
+  margin-top: 20px;
+  height: 56px;
+  line-height: 44px;
+  border-radius: 12px;
+  font-size: 20px;
+}
+.link {
+  border-width: 2px;
+  border-color: #eee;
+  color: #232333;
+  line-height: 32px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 16px;
+  padding-left: 16px;
+  display: block;
+  border: 1px solid #ccc;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  box-sizing: border-box;
+  height: 52px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
