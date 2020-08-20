@@ -14,7 +14,10 @@ peer.on("open", function (id) {
 navigator.mediaDevices
   .getUserMedia({
     audio: true,
-    video: { frameRate: { ideal: 10, max: 15 } },
+    video: {
+      width: { ideal: 300 },
+      height: { ideal: 300 },
+    },
   })
   .then(function (stream) {
     myStream = stream;
